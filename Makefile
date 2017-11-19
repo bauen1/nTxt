@@ -8,7 +8,7 @@ GENZEHN = genzehn
 
 GCCFLAGS = -Wall -W -marm
 LDFLAGS =
-ZEHNFLAGS = --name "nTxt"
+ZEHNFLAGS = --name "nTxt" --author "lkjcalc" --version "27" --color-support 1 --notice "modified by bauen1, source code on https://github.com/bauen1/nTxt"
 
 ifeq ($(DEBUG),FALSE)
 	GCCFLAGS += -Os
@@ -31,7 +31,7 @@ all: $(EXE).tns
 
 %.o: %.cpp
 	$(GXX) $(GCCFLAGS) -c $< -o $@
-	
+
 %.o: %.S
 	$(AS) -c $< -o $@
 
